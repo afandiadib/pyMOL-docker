@@ -11,6 +11,7 @@ Example of usage:
 ### nouveau-supported pyMOL container
 
      docker run --rm --user=$(id -u) \
+                --workdir=`pwd` \
                 --env=DISPLAY \
                 --volume=/home/$USER:/home/$USER \
                 --volume=/media:/media \
@@ -32,6 +33,7 @@ sudo chown -R $USER /dev/dri
 ### nvidia-supported pyMOL container
 
     docker run --rm --user=$(id -u) \
+               --workdir=`pwd` \
                --env=DISPLAY \
                --volume=/home/$USER:/home/$USER \
                --volume=/media:/media --volume=/mnt:/mnt \
