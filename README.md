@@ -36,7 +36,8 @@ docker run --rm --user=$(id -u) \
            --workdir=`pwd` \
            --env=DISPLAY \
            --volume=/home/$USER:/home/$USER \
-           --volume=/media:/media --volume=/mnt:/mnt \
+           --volume=/media:/media \
+           --volume=/mnt:/mnt \
            --volume=/etc/group:/etc/group:ro \
            --volume=/etc/passwd:/etc/passwd:ro \
            --volume=/etc/shadow:/etc/shadow:ro \
