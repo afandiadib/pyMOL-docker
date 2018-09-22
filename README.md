@@ -1,14 +1,14 @@
 # pyMOL Container
 
-Two versions available: NVIDIA and NOUVEAU-supported container. For NVIDIA support, you need to install NVIDIA driver on host and install nvidia-docker2.
+Two versions available: nvidia and mesa-supported container. For nvidia support, you need to install nvidia driver on host and install nvidia-docker2.
 
 To download:
   1. docker pull afandiadib/pymol:nvidia
-  2. docker pull afandiadib/pymol:nouveau
+  2. docker pull afandiadib/pymol:mesa
 
 Example of usage:
 
-### nouveau-supported pyMOL container
+### mesa-supported pyMOL container
 ```
 docker run --rm --user=$(id -u) \
            --workdir=`pwd` \
@@ -24,7 +24,7 @@ docker run --rm --user=$(id -u) \
            --volume=/usr/share/fonts/:/usr/share/fonts/:ro \
            --volume=/usr/share/icons:/usr/share/icons \
            --device=/dev/dri \
-           afandiadib/pymol:nouveau
+           afandiadib/pymol:mesa
 ```
 If permission denied, you need to change ownership of /dev/dri on host for gpu acceleration.
 sudo chown -R $USER /dev/dri
