@@ -7,7 +7,7 @@ ENV PATH /opt/conda/bin:$PATH
 RUN apt-get update && \
     apt-get -y install --no-install-recommends git wget bzip2 && \
     apt-get -y install libglew-dev freeglut3-dev libpng-dev libfreetype6-dev libxml2-dev libmsgpack-dev libglm-dev && \
-    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+    wget --no-check-certificate https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     chmod +x Miniconda3-latest-Linux-x86_64.sh && \
     bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
     conda install -y -c conda-forge pmw && \
